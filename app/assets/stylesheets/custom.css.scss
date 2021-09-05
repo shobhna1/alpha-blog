@@ -1,32 +1,40 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+$font-family-sans-serif: Roboto;
+
 .navbar {
     background-color: DarkGreen !important;
 }
 
 .nav-link {
+    font-family: $font-family-sans-serif;
     color: white !important;
 }
 
 #logo {
+    font-family: $font-family-sans-serif;
     float: left;
     color: white !important;
     font-size: 28px;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: -1px;
 }
 
-#home-container {
-    height: 700px;
-    width: 1200px;
-    margin-left:50px;
-    margin-right:50px;
-    margin-top:35px;
+body {
+    font-family: $font-family-sans-serif;
+    height: 100%;
+    background-color: lightgrey;
 }
 
-h3 {
-    color: white;
-    font-size: 74px;
+#page-content {
+    flex: 1 0 auto;
+}
+
+#home-container {
+    background-image: asset-url('camille-orgel-SKcTKYNRvHY-unsplash.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .centered {
@@ -36,18 +44,17 @@ h3 {
     transform: translate(-50%, -50%);
 }
 
+#signup {
+    font-family: $font-family-sans-serif;
+}
+
 .bottom {
     position: absolute;
-    top: 550px;
-    left: 900px;
+    top: 60%;
+    left: 48%;
 }
 
-p {
-    margin-top: 35px;
-    margin-left: 850px;
+#sticky-footer {
+   margin-top: 120px; 
 }
 
-#cp_footer {
-    margin-top: 20px;
-    margin-left:900px;
-}

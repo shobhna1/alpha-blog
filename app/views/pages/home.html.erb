@@ -1,14 +1,9 @@
-<div class="container-fluid text-center" id="home-container">
+<div class="container p-2 text-center mx-5 mt-5" id="page-content">
     <%= image_tag('camille-orgel-SKcTKYNRvHY-unsplash.jpg', height: "700", width: "1800") %> 
     <div class="centered">
-        <h3>Alpha Blog</h3>
+        <h3 class="display-3 text-white">Alpha Blog</h3>
     </div>
     <div class="bottom">
-        <button type="button" class="btn btn-success btn-lg">Sign Up</button>
+        <button type="button" class="btn btn-success btn-lg" id="signup">Sign Up</button>
     </div>
 </div>
-
-<p>
-  <%= link_to 'Articles Listing', articles_path %> |
-  <%= link_to 'About Page', about_path %>           
-</p>
