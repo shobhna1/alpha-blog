@@ -1,6 +1,12 @@
 <h2 class="text-center mt-4"><%= @user.username %>'s Profile</h2>
 
+<div class="text-center mt-4">
+    <%= image_tag(" ", size: "200", alt: "Profile Image") %>
+</div>
 
+<div class="text-center mt-4">
+    <%= link_to "Edit your profile", edit_user_path(@user), class: "btn btn-outline-info" %>
+</div>
 <h3 class="text-center mt-4">Articles</h3>
 
 <%= render 'articles/article' %>

@@ -6,6 +6,9 @@
       <div class="card text-center shadow mb-5 bg-white rounded">
         <div class="card-header fst-italic">
           by <%= @article.user.username if @article.user %>
+          <div>
+            <%= image_tag("", size: "100", alt: "image") %>
+          </div>
         </div>
         <div class="card-body">
           <div class="card-text text-start">
