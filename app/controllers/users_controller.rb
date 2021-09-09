@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :require_user, only: [:edit, :update]
-  before_action :require_same_user, only: [:edit, :update, :destroy]
+  before_action :require_same_user, only: [:edit, :update]
+  before_action :require_same_user_del, only: [:destroy]
 
   def show
     @articles = @user.articles.paginate(page: params[:page], per_page: 5)
@@ -55,8 +56,15 @@ class UsersController < ApplicationController
   end
   
   def require_same_user
+    if current_user != @user 
+      flash[:alert] = "Only profile owner can edit their profile"
+      redirect_to @user
+    end
+  end
+
+  def require_same_user_del
     if current_user != @user && !current_user.admin?
-      flash[:alert] = "Only profile owner can edit or delete their profile"
+      flash[:alert] = "Only profile owner can delete their profile"
       redirect_to @user
     end
   end
