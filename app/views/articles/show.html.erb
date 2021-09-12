@@ -8,6 +8,11 @@
           by <%= @article.user.username if @article.user %>
           <div>
             <%= image_tag("", size: "100", alt: "image") %>
+            <div class="mt-2">
+              <% if @article.categories.any? %>
+                <%= render @article.categories %>
+              <% end %>
+            </div>
           </div>
         </div>
         <div class="card-body">
